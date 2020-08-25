@@ -1,0 +1,328 @@
+* {
+  box-sizing: border-box;
+}
+
+.main-header {
+  height: 100vh;
+  position: relative;
+  background-size: cover;
+
+  .overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+    z-index: 2;
+  }
+
+  .header-text {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    animation: headerAnimation 3s ease;
+    h1 {
+      font-size: 8rem;
+    }
+    p {
+      font-size: 3rem;
+      margin: 30px;
+    }
+    a {
+      font-size: 2rem;
+      display: inline-block;
+      padding: 15px 40px;
+      background: blue;
+      color: #fff;
+      border-radius: 25px;
+      box-shadow: 3px 3px 6px #000;
+      &:hover {
+        padding: 13px 38px;
+        border: 2px solid #fff;
+        background: #aa00ff;
+      }
+    }
+  }
+
+  img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+}
+
+.main-nav  {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  animation: nav-animation 3s ease-in;
+  background: #fff;
+
+  .nav-bar {
+    display: flex;
+    justify-content: center;
+
+    a {
+      font-size: 2rem;
+      padding: 20px 30px;
+      display: inline-block;
+      color: #000;
+    }
+
+    a:hover {
+      background: #988a53;
+      color: #fff;
+    }
+  }
+
+}
+
+.services {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .services-container {
+    width: 100%;
+    background: #3b5998;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr  40vh;
+
+    .services-top {
+      height: 60vh;
+      background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+      url("https://source.unsplash.com/QnNqGoCnBg0") center/cover no-repeat;
+      grid-row: 1/2;
+      grid-column: 1/4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      color: #fff;
+
+      h2 {
+        font-size: 6rem;
+        margin-bottom: 30px;
+      }
+      p {
+        font-size: 2rem;
+      }
+    }
+
+    .services-right,
+    .services-middle,
+    .services-left {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      position: relative;
+      color: #fff;
+      padding: 20px;
+
+      h2 {
+        font-size: 3rem;
+        margin-bottom: 30px;
+        opacity: 0;
+      }
+      p {
+        font-size: 2rem;
+        opacity: 0;
+      }
+
+      i {
+        font-size: 3rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #262626;
+        padding: 30px;
+        border-radius: 100%;
+        transition: opacity 0.4s ease;
+      }
+      &:hover i{
+        opacity: 0;
+      }
+
+      &:hover h2,
+      &:hover p {
+        opacity: 1;
+      }
+    }
+
+    .services-right {
+      background: url("https://source.unsplash.com/nyekPQwZbgw") center/cover no-repeat;
+      grid-row: 2/3;
+      grid-column: 1/2;
+
+      &:hover {
+        background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),
+        url("https://source.unsplash.com/nyekPQwZbgw") center/cover no-repeat;
+      }
+    }
+    .services-middle {
+      background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+      url("https://source.unsplash.com/EZt7OJagHyY") center/cover no-repeat;
+      grid-row: 2/3;
+      grid-column: 2/3;
+
+      &:hover {
+        background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),
+        url("https://source.unsplash.com/EZt7OJagHyY") center/cover no-repeat;
+      }
+
+    }
+    .services-left {
+      background: url("https://source.unsplash.com/qZ5lPCPvdXE") center/cover no-repeat;
+      grid-row: 2/3;
+      grid-column: 3/4;
+
+      &:hover {
+        background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),
+        url("https://source.unsplash.com/qZ5lPCPvdXE") center/cover no-repeat;
+      }
+    }
+  }
+}
+
+@keyframes nav-animation   {
+  0% { left: -200%;}
+  100% {left: 0;}
+}
+
+@keyframes headerAnimation  {
+  0% { top: -200%;}
+  100% {top: 50%;}
+}
+
+// media queries
+@media (max-width: 720px) {
+  @keyframes nav-animation   {
+    0% { left: 0;}
+    100% {left: 0;}
+  }
+  .main-header {
+    .header-text {
+      h1 {
+        font-size: 4rem;
+      }
+
+      p {
+        font-size: 2rem;
+      }
+
+      a {
+        font-size: 1.5rem;
+      }
+    }
+
+
+
+    .main-nav {
+      top: -100%;
+      transition: top 2s ease;
+
+      .nav-bar{
+        flex-direction: column;
+        justify-content: center;
+        padding: 20px;
+        height: 100%;
+      }
+
+      .hamburger-menu {
+        width: 40px;
+        background: #fff;
+        position: fixed;
+        right: 10px;
+        top: 10px;
+        z-index: 1000;
+        border-radius: 20px;
+
+        .line {
+          height: 5px;
+          width: 90%;
+          background: #000;
+          margin: 5px auto;
+          transition: all .8s;
+        }
+
+
+        // revisar
+         .change .line-1 {
+            transform: rotateZ(-405deg) translate(-8px, 6 p x);
+          }
+          .change .line-2 {
+            opacity: 0;
+          }
+          .change .line-3{
+            transform: rotateZ(405deg) translate(-8px, -6px);
+          }
+
+      }
+    }
+
+    .change {
+      height: 100%;
+      top: 0;
+    }
+  }
+
+  .services {
+    .services-container {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(4, 1fr);
+
+
+      .services-top {
+        grid-row: 1/2;
+        grid-column: 1/2;
+        height: 50vh;
+        padding: 10px;
+
+        h2 {
+          font-size: 3rem;
+        }
+        p {
+          font-size: 1.5rem;
+        }
+      }
+      .services-right,
+      .services-left,
+      .services-middle {
+        height: 50vh;
+        i {
+          font-size: 2rem;
+        }
+        h2 {
+          font-size: 3rem;
+        }
+        p {
+          font-size: 1.5rem;
+        }
+      }
+      .services-right {
+        grid-row: 2/3;
+        grid-column: 1/2;
+      }
+      .services-middle {
+        grid-row: 3/4;
+        grid-column: 1/2;
+      }
+      .services-left {
+        grid-row: 4/5;
+        grid-column: 1/2;
+      }
+
+    }
+  }
+
+
+}
