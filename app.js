@@ -15,3 +15,14 @@ navLink.forEach(function (link){
     })
 })
 
+//hide main-nav on scroll
+let prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+    var currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+        mainNav.style.top = "0";
+    } else {
+        mainNav.style.top = "-71.11px";
+    }
+    prevScrollpos = currentScrollPos;
+}
