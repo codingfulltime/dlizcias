@@ -7,8 +7,6 @@
 
 .bread {
   position: absolute;
-  width: 5px;
-  height: 5px;
   background: #787846;
   border-radius: 10px;
   animation: pancito 4s linear infinite; }
