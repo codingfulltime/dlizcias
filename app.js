@@ -2,8 +2,6 @@ const menuIcon = document.querySelector('.hamburger-menu');
 const mainNav = document.querySelector('.main-nav');
 const navLink = document.querySelectorAll('.nav-link');
 
-
-
 // close and open Navbar with Hamburger menu
 menuIcon.addEventListener('click', () => {
     mainNav.classList.toggle('change');

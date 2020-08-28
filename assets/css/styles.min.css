@@ -11,6 +11,17 @@
   border-radius: 10px;
   animation: pancito 4s linear infinite; }
 
+@keyframes shakeBtn {
+  0% {
+    transform: translateX(0); }
+  40% {
+    transform: translateX(-15px); }
+  60% {
+    transform: translateX(0px); }
+  80% {
+    transform: translateX(-5px); }
+  100% {
+    transform: translateX(0px); } }
 @keyframes pancito {
   0% {
     transform: translateY(0); }
@@ -27,12 +38,19 @@
 .main-header {
   height: 100vh;
   position: relative;
-  background-size: cover; }
+  background-size: cover;
+  z-index: 20; }
+  .main-header img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: 1; }
   .main-header .overlay {
     position: absolute;
     height: 100%;
     width: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    background: rgba(0, 0, 0, 0.5);
     z-index: 2; }
   .main-header .header-text {
     position: relative;
@@ -60,12 +78,6 @@
         padding: 13px 38px;
         border: 2px solid #fff;
         background: #aa00ff; }
-  .main-header img {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    z-index: 1; }
 
 .main-nav {
   position: absolute;
@@ -115,6 +127,43 @@
       flex-direction: column;
       position: relative;
       color: #fff; }
+      .services .services-container .services-top .productosBtn {
+        z-index: 2;
+        background: #3b9896;
+        color: #fff;
+        padding: 15px 25px;
+        font-size: 1.4rem;
+        margin-top: 30px;
+        border-radius: 25px; }
+        .services .services-container .services-top .productosBtn:hover {
+          border: 2px solid #fff;
+          background: #37728b;
+          padding: 13px 23px; }
+      .services .services-container .services-top .contact-button {
+        position: fixed;
+        bottom: 20px;
+        left: 0;
+        background: #cd3744;
+        line-height: 1.6;
+        padding: 15px 20px;
+        border-radius: 0 20px 20px 0;
+        z-index: 18;
+        display: inline-block;
+        text-align: center;
+        transition: all 0.4s ease;
+        animation: shakeBtn 2s ease infinite; }
+        .services .services-container .services-top .contact-button i {
+          font-size: 2rem; }
+        .services .services-container .services-top .contact-button a {
+          color: #fff;
+          font-size: 1.6rem;
+          display: none; }
+        .services .services-container .services-top .contact-button:hover {
+          animation: none; }
+          .services .services-container .services-top .contact-button:hover a {
+            display: block; }
+          .services .services-container .services-top .contact-button:hover i {
+            display: none; }
       .services .services-container .services-top img {
         position: absolute;
         height: 100%;
@@ -269,10 +318,13 @@
   flex-wrap: wrap;
   justify-content: center;
   line-height: 1.4;
-  font-size: 1.6rem; }
+  font-size: 1.6rem;
+  position: relative; }
   .main-footer .footer-column-1 {
     width: 40%;
     padding: 20px 0; }
+    .main-footer .footer-column-1 a {
+      color: #fff; }
   .main-footer .footer-column-2 {
     width: 40%;
     padding: 20px 0; }
@@ -281,6 +333,17 @@
     text-align: center;
     padding: 20px 0;
     background: #262626; }
+
+.productsGallery {
+  width: 70%;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 200px 200px; }
+
+.products-img {
+  width: 100%; }
+
+.footer-gallery {
+  z-index: 20; }
 
 @keyframes nav-animation {
   0% {
@@ -345,6 +408,8 @@
       grid-column: 1/2;
       height: 50vh;
       padding: 10px; }
+      .services .services-container .services-top .contact-button i {
+        font-size: 1rem; }
       .services .services-container .services-top h2 {
         font-size: 3rem; }
       .services .services-container .services-top p {

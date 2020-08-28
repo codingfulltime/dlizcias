@@ -7,12 +7,21 @@
   height: 100vh;
   position: relative;
   background-size: cover;
+  z-index: 20;
+
+  img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
 
   .overlay {
     position: absolute;
     height: 100%;
     width: 100%;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+    background: rgba(0,0,0,0.5);
     z-index: 2;
   }
 
@@ -48,13 +57,7 @@
     }
   }
 
-  img {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    z-index: 1;
-  }
+
 }
 
 .main-nav  {
@@ -82,7 +85,6 @@
       color: #fff;
     }
   }
-
 }
 
 .services {
@@ -117,6 +119,58 @@
       flex-direction: column;
       position: relative;
       color: #fff;
+
+      .productosBtn {
+        z-index: 2;
+        background: #3b9896;
+        color: #fff;
+        padding: 15px 25px;
+        font-size: 1.4rem;
+        margin-top: 30px;
+        border-radius: 25px;
+
+        &:hover {
+          border: 2px solid #fff;
+          background: #37728b;
+          padding: 13px 23px;
+        }
+      }
+
+      .contact-button {
+        position: fixed;
+        bottom: 20px;
+        left: 0;
+        background: #cd3744;
+        line-height: 1.6;
+        padding: 15px 20px;
+        border-radius: 0 20px 20px 0;
+        z-index: 18;
+        display: inline-block;
+        text-align: center;
+        transition: all 0.4s ease;
+        animation: shakeBtn 2s ease infinite;
+
+        i {
+          font-size: 2rem;
+        }
+
+        a {
+          color: #fff;
+          font-size: 1.6rem;
+          display: none;
+        }
+        &:hover {
+          a {
+            display: block;
+          }
+          i {
+            display: none;
+          }
+
+          animation: none;
+
+        }
+      }
 
       img {
         position: absolute;
@@ -181,7 +235,7 @@
         transition: opacity 0.4s ease;
         z-index: 2;
       }
-      &:hover i,{
+      &:hover i{
         opacity: 0;
       }
 
@@ -315,10 +369,14 @@
   justify-content: center;
   line-height: 1.4;
   font-size: 1.6rem;
+  position: relative;
 
   .footer-column-1 {
     width: 40%;
     padding: 20px 0;
+    a {
+      color: #fff;
+    }
   }
   .footer-column-2 {
     width: 40%;
@@ -330,6 +388,25 @@
     padding: 20px 0;
     background: #262626;
   }
+}
+
+// Gallery page
+
+.productsGallery {
+  width: 70%;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 200px 200px;
+  .content-gallery {
+
+  }
+}
+
+.products-img {
+  width: 100%;
+}
+
+.footer-gallery {
+  z-index: 20;
 }
 
 @keyframes nav-animation   {
@@ -424,6 +501,12 @@
         grid-column: 1/2;
         height: 50vh;
         padding: 10px;
+
+        .contact-button {
+          i {
+            font-size: 1rem;
+          }
+        }
 
         h2 {
           font-size: 3rem;
