@@ -62,12 +62,12 @@
     text-align: center;
     animation: headerAnimation 3s ease; }
     .main-header .header-text h1 {
-      font-size: 8rem; }
+      font-size: 6rem; }
     .main-header .header-text p {
-      font-size: 3rem;
+      font-size: 2.5rem;
       margin: 30px; }
     .main-header .header-text a {
-      font-size: 2rem;
+      font-size: 1.5rem;
       display: inline-block;
       padding: 15px 40px;
       background: blue;
@@ -112,7 +112,7 @@
     opacity: 0; }
   .services .services-container {
     width: 100%;
-    background: #3b5998;
+    background: #fff;
     margin: auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -126,7 +126,7 @@
       align-items: center;
       flex-direction: column;
       position: relative;
-      color: #fff; }
+      color: #000; }
       .services .services-container .services-top .productosBtn {
         z-index: 2;
         background: #3b9896;
@@ -144,6 +144,7 @@
         bottom: 20px;
         left: 0;
         background: #cd3744;
+        color: #fff;
         line-height: 1.6;
         padding: 15px 20px;
         border-radius: 0 20px 20px 0;
@@ -280,11 +281,11 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  background: #3b5998; }
+  background: #fff; }
   .reviews .reviews-text {
     width: 90%;
     margin: 30px auto;
-    color: #fff; }
+    color: #000; }
     .reviews .reviews-text p {
       font-size: 1.5rem;
       margin: 30px 0; }
@@ -293,7 +294,7 @@
   .reviews .testimonial {
     width: 350px;
     margin: 50px 0;
-    background: #fff;
+    background: #325770;
     padding: 30px 10px;
     border-radius: 20px;
     position: relative; }
@@ -309,7 +310,8 @@
       border-radius: 10px; }
     .reviews .testimonial p {
       font-size: 1.5rem;
-      line-height: 1.3; }
+      line-height: 1.3;
+      color: #fff; }
 
 .main-footer {
   background: black;
@@ -334,13 +336,57 @@
     padding: 20px 0;
     background: #262626; }
 
-.productsGallery {
-  width: 70%;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 200px 200px; }
+.gallery-header {
+  height: 50vh;
+  overflow: hidden; }
+  .gallery-header .galleryTitle h1 {
+    font-size: 4rem; }
 
 .products-img {
   width: 100%; }
+
+.productsGallery {
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 300px);
+  grid-auto-rows: 300px;
+  grid-gap: 10px;
+  margin: auto;
+  margin: 50px auto; }
+  .productsGallery .picGallery {
+    position: relative;
+    color: #fff;
+    overflow: hidden; }
+    .productsGallery .picGallery img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      z-index: 1; }
+    .productsGallery .picGallery .overlay-products {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      z-index: 2;
+      opacity: 0; }
+    .productsGallery .picGallery .galleryText {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 3;
+      opacity: 0;
+      transition: all 0.5s ease; }
+      .productsGallery .picGallery .galleryText h2 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+        font-weight: bold; }
+      .productsGallery .picGallery .galleryText p {
+        font-size: 1.5rem; }
+    .productsGallery .picGallery:hover .galleryText, .productsGallery .picGallery:hover .overlay-products {
+      opacity: 1; }
 
 .footer-gallery {
   z-index: 20; }
@@ -464,6 +510,11 @@
     font-size: 1.6rem; }
   .reviews .testimonial p {
     font-size: 1.3rem; }
+
+  .productsGallery {
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    width: 90%; }
 
   .main-footer {
     flex-direction: column;

@@ -18,7 +18,6 @@ navLink.forEach(function (link){
 // Bread Animation
 const breadContainer = document.querySelector('.bread-container');
 function breadAnimation(){
-
     let breadItems;
     for( breadItems = 0; breadItems <= 500; breadItems++) {
         setTimeout(function (){
