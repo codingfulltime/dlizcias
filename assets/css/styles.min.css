@@ -236,16 +236,16 @@ body {
       .services .services-container .services-right i,
       .services .services-container .services-middle i,
       .services .services-container .services-left i {
-        font-size: 2rem;
+        font-size: 1.5rem;
         position: absolute;
         left: 50%;
-        top: -2.5rem;
+        top: -2rem;
         transform: translateX(-50%);
         background: #614eac;
-        padding: 30px;
+        padding: 15px;
         border-radius: 100%;
         transition: opacity 0.4s ease;
-        z-index: 2;
+        z-index: 5;
         box-shadow: 7px 10px 20px 0px rgba(0, 0, 0, 0.75); }
       .services .services-container .services-right:hover h2, .services .services-container .services-right:hover p, .services .services-container .services-right:hover .services-overlay,
       .services .services-container .services-middle:hover h2,
