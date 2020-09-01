@@ -224,7 +224,7 @@ body {
       .services .services-container .services-right h2,
       .services .services-container .services-middle h2,
       .services .services-container .services-left h2 {
-        font-size: 2rem;
+        font-size: 1.5rem;
         font-weight: bold;
         margin-bottom: 30px;
         opacity: 0;
@@ -232,7 +232,7 @@ body {
       .services .services-container .services-right p,
       .services .services-container .services-middle p,
       .services .services-container .services-left p {
-        font-size: 2rem;
+        font-size: 1.5rem;
         opacity: 0;
         z-index: 2; }
       .services .services-container .services-right i,
@@ -499,45 +499,55 @@ body {
     top: 0;
     height: 100%; }
 
-  .services .services-container {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, 1fr); }
-    .services .services-container .services-top {
-      grid-row: 1/2;
-      grid-column: 1/2;
-      height: 50vh;
-      padding: 10px; }
-      .services .services-container .services-top .contact-button i {
-        font-size: 1rem; }
-      .services .services-container .services-top h2 {
-        font-size: 3rem; }
-      .services .services-container .services-top p {
-        font-size: 1.5rem; }
-    .services .services-container .services-right,
-    .services .services-container .services-left,
-    .services .services-container .services-middle {
-      height: 50vh; }
-      .services .services-container .services-right i,
-      .services .services-container .services-left i,
-      .services .services-container .services-middle i {
-        font-size: 2rem; }
-      .services .services-container .services-right h2,
-      .services .services-container .services-left h2,
-      .services .services-container .services-middle h2 {
-        font-size: 3rem; }
-      .services .services-container .services-right p,
-      .services .services-container .services-left p,
-      .services .services-container .services-middle p {
-        font-size: 1.5rem; }
-    .services .services-container .services-right {
-      grid-row: 2/3;
-      grid-column: 1/2; }
-    .services .services-container .services-middle {
-      grid-row: 3/4;
-      grid-column: 1/2; }
-    .services .services-container .services-left {
-      grid-row: 4/5;
-      grid-column: 1/2; }
+  .services {
+    padding: 10px; }
+    .services .services-container {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(4, 1fr);
+      grid-gap: 40px; }
+      .services .services-container .services-top {
+        grid-row: 1/2;
+        grid-column: 1/2;
+        height: 50vh;
+        padding: 10px;
+        text-align: center; }
+        .services .services-container .services-top .contact-button i {
+          font-size: 1rem; }
+        .services .services-container .services-top h2 {
+          font-size: 3rem; }
+        .services .services-container .services-top p {
+          font-size: 1.5rem; }
+      .services .services-container .services-right,
+      .services .services-container .services-left,
+      .services .services-container .services-middle {
+        height: 50vh; }
+        .services .services-container .services-right i,
+        .services .services-container .services-left i,
+        .services .services-container .services-middle i {
+          font-size: 2rem; }
+        .services .services-container .services-right h2,
+        .services .services-container .services-left h2,
+        .services .services-container .services-middle h2 {
+          font-size: 1.5rem;
+          opacity: 1; }
+        .services .services-container .services-right p,
+        .services .services-container .services-left p,
+        .services .services-container .services-middle p {
+          font-size: 1.5rem;
+          opacity: 1; }
+        .services .services-container .services-right .services-overlay,
+        .services .services-container .services-left .services-overlay,
+        .services .services-container .services-middle .services-overlay {
+          opacity: 1; }
+      .services .services-container .services-right {
+        grid-row: 2/3;
+        grid-column: 1/2; }
+      .services .services-container .services-middle {
+        grid-row: 3/4;
+        grid-column: 1/2; }
+      .services .services-container .services-left {
+        grid-row: 4/5;
+        grid-column: 1/2; }
 
   .about {
     grid-template-columns: 1fr 1fr;
@@ -554,15 +564,23 @@ body {
       .about .about-text p {
         font-size: 1.4rem; }
 
-  .reviews .reviews-text h1 {
-    font-size: 2.5rem; }
-  .reviews .reviews-text p {
-    font-size: 1.3rem;
-    line-height: 1.4; }
-  .reviews .testimonial h3 {
-    font-size: 1.6rem; }
-  .reviews .testimonial p {
-    font-size: 1.3rem; }
+  .reviews {
+    padding: 0 10px; }
+    .reviews .reviews-text {
+      width: 100%; }
+      .reviews .reviews-text h1 {
+        font-size: 2.5rem; }
+      .reviews .reviews-text p {
+        font-size: 1.3rem;
+        line-height: 1.4; }
+    .reviews .testimonial {
+      margin: 30px 0;
+      padding: 30px 0; }
+      .reviews .testimonial h3 {
+        font-size: 1.6rem;
+        left: 50px; }
+      .reviews .testimonial p {
+        font-size: 1.3rem; }
 
   .productsGallery {
     grid-template-rows: 1fr;
