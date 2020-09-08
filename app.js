@@ -1,6 +1,12 @@
 const menuIcon = document.querySelector('.hamburger-menu');
 const mainNav = document.querySelector('.main-nav');
 const navLink = document.querySelectorAll('.nav-link');
+const shakeBtn = document.querySelector('.contact-button');
+
+// chang Shaking button form
+shakeBtn.addEventListener('click', () => {
+    shakeBtn.classList.toggle('change');
+})
 
 // close and open Navbar with Hamburger menu
 menuIcon.addEventListener('click', () => {

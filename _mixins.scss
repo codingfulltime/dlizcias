@@ -1,0 +1,52 @@
+@mixin flexAlignment($justify-content, $align-items, $flex-direction){
+    display: flex;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    flex-direction: $flex-direction;
+}
+
+@mixin positionCentering($position, $y_axis, $x_axis, $translateX, $translateY){
+    position: $position;
+    top: $y_axis;
+    left: $x_axis;
+    transform: translate($translateX, $translateY);
+}
+
+@mixin buttons(){
+    font-size: 1.5rem;
+    display: inline-block;
+    padding: 15px 40px;
+    background: $linksBg;
+    color: $linksTxt;
+    border-radius: 25px;
+    box-shadow: 3px 3px 6px #000;
+    border: 2px $secondaryColor solid;
+    box-shadow: 7px 10px 20px 0px rgba(0,0,0,0.75);
+    transition: $hoverTransition;
+    &:hover {
+    background: $primaryColor;
+    color: $secondaryColor;
+    }
+}
+
+@mixin headerTextStyles($fontSize){
+    font-size: $fontSize;
+      font-family: $fontTitle;
+      text-shadow: $textShadow;
+}
+
+@mixin overlayShadow($z_index){
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: $z_index;
+}
+
+@mixin htmlImageStyles ($position, $z_index){
+        position: $position;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        z-index: $z_index;
+}

@@ -1,0 +1,102 @@
+
+
+// Gallery page
+.gallery-header {
+    height: 50vh;
+    overflow: hidden;
+  
+    .galleryTitle {
+      @include headerTextStyles(6rem);
+    }
+  }
+  
+  .wrapper {
+    background: $primaryColor;
+    min-height: 100%;
+    padding: 50px 0;
+  }
+  
+  .gallery-contact {
+    position: fixed;
+    bottom: 20px;
+    left: 0;
+    background: #cd3744;
+    color: #fff;
+    line-height: 1.6;
+    padding: 15px 20px;
+    border-radius: 0 20px 20px 0;
+    z-index: 18;
+    display: inline-block;
+    text-align: center;
+    transition: all 0.4s ease;
+    animation: shakeBtn 2s ease infinite;
+    box-shadow: 7px 10px 20px 0px rgba(0,0,0,0.75);
+  
+    i {
+      font-size: 2rem;
+    }
+  
+    a {
+      color: #fff;
+      font-size: 1.6rem;
+      display: none;
+    }
+    &:hover {
+      a {
+        display: block;
+      }
+      i {
+        display: none;
+      }
+  
+      animation: none;
+  
+    }
+  }
+  
+  .products-img {
+    width: 100%;
+  }
+  
+  .productsGallery {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 500px);
+    grid-auto-rows: 500px;
+    grid-gap: 10px;
+    margin: auto;
+    margin: 0 auto;
+  
+    .picGallery {
+      color: #fff;
+      box-shadow: 7px 10px 20px 0px rgba(0,0,0,0.75);
+  
+      img {
+        @include htmlImageStyles(static, 1);
+        height: 70%;
+      }
+  
+      .galleryText {
+        background: $secondaryColor;
+        padding: 10px;
+        color: $primaryColor;
+        height: 30%;
+        h2 {
+          font-size: $secondaryInfoFontSize;
+          margin-bottom: 10px;
+          font-weight: bold;
+        }
+        p {
+          font-size: $secondaryInfoFontSize;
+        }
+      }
+      
+    }
+  }
+  
+  
+  
+  .footer-gallery {
+    z-index: 20;
+  }

@@ -175,18 +175,26 @@
         transition: all 0.4s ease;
         animation: shakeBtn 2s ease infinite;
         box-shadow: 7px 10px 20px 0px rgba(0, 0, 0, 0.75); }
+        .services .services-container .services-top .contact-button .close {
+          font-size: 2rem;
+          background: #fff;
+          color: #cd3744;
+          display: inline-block;
+          width: 15%;
+          border-radius: 100%;
+          padding: 10px;
+          display: none;
+          margin: 20px auto; }
         .services .services-container .services-top .contact-button i {
           font-size: 2rem; }
         .services .services-container .services-top .contact-button a {
           color: #fff;
           font-size: 1.6rem;
           display: none; }
-        .services .services-container .services-top .contact-button:hover {
-          animation: none; }
-          .services .services-container .services-top .contact-button:hover a {
-            display: block; }
-          .services .services-container .services-top .contact-button:hover i {
-            display: none; }
+        .services .services-container .services-top .contact-button.change a {
+          display: block; }
+        .services .services-container .services-top .contact-button.change i {
+          display: none; }
     .services .services-container .services-right,
     .services .services-container .services-middle,
     .services .services-container .services-left {

@@ -1,0 +1,41 @@
+.main-header {
+    height: 100vh;
+    position: relative;
+    background-size: cover;
+    z-index: 20;
+  
+    img {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      z-index: 1;
+    }
+  
+    .overlay {
+      @include overlayShadow(2);
+    }
+  
+    .header-text {
+      @include positionCentering(relative, 50%, 50%, -50%, -50%);
+      z-index: 3;
+      color:  $thirdColor;
+      text-align: center;
+      animation: headerAnimation 3s ease;
+      h1 {
+        @include headerTextStyles(6rem);
+      }
+      p {
+        font-size: $mainTextFontSize;
+        color: $primaryColor;
+        margin: 30px;
+      }
+      a {
+        @include buttons();
+      }
+    }
+  
+  
+  }
+  
+ 
