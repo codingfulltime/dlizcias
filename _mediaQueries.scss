@@ -167,9 +167,18 @@
       }
     }
     .productsGallery {
-      grid-template-rows: 1fr;
-      grid-template-columns: 1fr;
-      width: 90%;
+      flex-direction: column;
+      .picGallery {
+        width: 100%;
+        .galleryText {
+          h2 {
+            font-size: $secondaryInfoSmallSize;
+          }
+          p {
+            font-size: $secondaryInfoSmallSize;
+          }
+        }
+      }
     }
     .main-footer {
       flex-direction: column;
