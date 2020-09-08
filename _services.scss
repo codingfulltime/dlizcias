@@ -39,54 +39,9 @@
           @include buttons();
           margin-top: 30px;
         }
-
-         
-  
+        
         .contact-button {
-          position: fixed;
-          bottom: 20px;
-          left: 0;
-          background: #cd3744;
-          color: #fff;
-          line-height: 1.6;
-          padding: 15px 20px;
-          border-radius: 0 20px 20px 0;
-          z-index: 18;
-          display: inline-block;
-          text-align: center;
-          transition: all 0.4s ease;
-          animation: shakeBtn 2s ease infinite;
-          box-shadow: 7px 10px 20px 0px rgba(0,0,0,0.75);
-          .close {
-            font-size: 2rem;
-            background: #fff;
-            color: #cd3744;
-            display: inline-block;
-            width: 15%;
-            border-radius: 100%;
-            padding: 10px;
-            display: none;
-            margin: 20px auto;
-          }
-          i {
-            font-size: 2rem;
-          }
-  
-          a {
-            color: #fff;
-            font-size: 1.6rem;
-            display: none;
-          }
-          
-
-          &.change {
-            a {
-              display: block;
-            }
-            i {
-              display: none;
-            }
-          }
+          @include contactBtn();
         }
       }
   

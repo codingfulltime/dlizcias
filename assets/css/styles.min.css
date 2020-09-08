@@ -381,6 +381,41 @@
   background: #fff;
   min-height: 100%;
   padding: 50px 0; }
+  .wrapper .contact-button {
+    position: fixed;
+    bottom: 20px;
+    left: 0;
+    background: #cd3744;
+    color: #fff;
+    line-height: 1.6;
+    padding: 15px 20px;
+    border-radius: 0 20px 20px 0;
+    z-index: 18;
+    display: inline-block;
+    text-align: center;
+    transition: all 0.4s ease;
+    animation: shakeBtn 2s ease infinite;
+    box-shadow: 7px 10px 20px 0px rgba(0, 0, 0, 0.75); }
+    .wrapper .contact-button .close {
+      font-size: 2rem;
+      background: #fff;
+      color: #cd3744;
+      display: inline-block;
+      width: 15%;
+      border-radius: 100%;
+      padding: 10px;
+      display: none;
+      margin: 20px auto; }
+    .wrapper .contact-button i {
+      font-size: 2rem; }
+    .wrapper .contact-button a {
+      color: #fff;
+      font-size: 1.6rem;
+      display: none; }
+    .wrapper .contact-button.change a {
+      display: block; }
+    .wrapper .contact-button.change i {
+      display: none; }
 
 .gallery-contact {
   position: fixed;
@@ -448,11 +483,6 @@
   z-index: 20; }
 
 @media (max-width: 720px) {
-  @keyframes nav-animation {
-    0% {
-      left: 0; }
-    100% {
-      left: 0; } }
   .main-header .header-text h1 {
     font-size: 4rem; }
   .main-header .header-text p {
@@ -463,7 +493,11 @@
   .main-header .main-nav {
     top: -100%;
     transition: all 2s ease;
-    position: fixed; }
+    position: fixed;
+    animation: none; }
+    .main-header .main-nav.change {
+      top: 0;
+      height: 100%; }
     .main-header .main-nav .nav-bar {
       flex-direction: column;
       justify-content: center;
@@ -483,15 +517,6 @@
         background: #000;
         margin: 5px auto;
         transition: all .8s; }
-      .main-header .main-nav .hamburger-menu .change .line-1 {
-        transform: rotateZ(-405deg) translate(-8px, 6 p x); }
-      .main-header .main-nav .hamburger-menu .change .line-2 {
-        opacity: 0; }
-      .main-header .main-nav .hamburger-menu .change .line-3 {
-        transform: rotateZ(405deg) translate(-8px, -6px); }
-  .main-header .change {
-    top: 0;
-    height: 100%; }
 
   .services {
     padding: 10px; }
@@ -521,7 +546,6 @@
       .services .services-container .services-left h2,
       .services .services-container .services-middle h2 {
         font-size: 1.6rem;
-        text-align: center;
         opacity: 1; }
       .services .services-container .services-right p,
       .services .services-container .services-left p,
