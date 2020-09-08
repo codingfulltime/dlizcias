@@ -1,12 +1,3 @@
-// colors #20150A DarkBrown / #D5000F red / #68B479 green / #ADB3BE light blue 
-// Opción 1
-// $primaryColor: #27226a;
-// $secondaryColor: #b8ba76;
-// $thirdColor: #c8d4e7;
-// $paragraphColor: #fff;
-// $footerBg: #202002;
-// $linksBg: #c8d4e7;
-// $linksTxt: #27226a;
 
 $primaryColor:#fff;
 $secondaryColor: #3D4756;
@@ -18,3 +9,14 @@ $linksTxt: #fff;
 
 $textShadow: 3px 1px 2px rgba(0,0,0,0.6);
 $hoverTransition: all 0.5s ease;
+
+$fontParagraph:  'Roboto', sans-serif;
+$fontTitle: 'Lobster', cursive;
+
+$mainTextFontSize: 2.3rem;
+$secondaryInfoFontSize: 1.7rem;
+$titleFontSize: 4rem;
+
+$titleSmallSize: 4rem;
+$paragraphSmallSize: 2rem;
+$secondaryInfoSmallSize: 1.6rem;
