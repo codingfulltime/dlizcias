@@ -448,7 +448,7 @@
   .main-header .header-text h1 {
     font-size: 4rem; }
   .main-header .header-text p {
-    font-size: 2rem;
+    font-size: 1.6rem;
     line-height: 1.4; }
   .main-header .header-text a {
     font-size: 1.5rem; }
@@ -489,7 +489,7 @@
     padding: 10px; }
     .services .services-container {
       grid-template-columns: 1fr;
-      grid-template-rows: 1fr repeat(3, 40vh);
+      grid-template-rows: 1fr repeat(3, 50vh);
       grid-gap: 40px; }
       .services .services-container .services-top {
         grid-row: 1/2;
@@ -497,13 +497,14 @@
         padding: 10px;
         text-align: center;
         line-height: 1.4;
-        height: 70vh; }
+        height: 70vh;
+        margin-bottom: 30px; }
         .services .services-container .services-top .contact-button i {
           font-size: 1rem; }
         .services .services-container .services-top h2 {
           font-size: 4rem; }
         .services .services-container .services-top p {
-          font-size: 2rem; }
+          font-size: 1.6rem; }
       .services .services-container .services-right i,
       .services .services-container .services-left i,
       .services .services-container .services-middle i {
@@ -512,6 +513,7 @@
       .services .services-container .services-left h2,
       .services .services-container .services-middle h2 {
         font-size: 1.6rem;
+        text-align: center;
         opacity: 1; }
       .services .services-container .services-right p,
       .services .services-container .services-left p,
@@ -545,7 +547,7 @@
       .about .about-text h2 {
         font-size: 4rem; }
       .about .about-text p {
-        font-size: 2rem; }
+        font-size: 1.6rem; }
 
   .reviews {
     padding: 0 10px; }
@@ -554,7 +556,7 @@
       .reviews .reviews-text h1 {
         font-size: 4rem; }
       .reviews .reviews-text p {
-        font-size: 2rem;
+        font-size: 1.6rem;
         line-height: 1.4; }
     .reviews .testimonial {
       margin: 30px 0;
@@ -573,7 +575,7 @@
   .main-footer {
     flex-direction: column;
     line-height: 1.6;
-    font-size: 1.3rem; }
+    font-size: 1.6rem; }
     .main-footer .footer-column-1,
     .main-footer .footer-column-2 {
       width: 100%;
