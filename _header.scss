@@ -24,6 +24,7 @@
       animation: headerAnimation 3s ease;
       h1 {
         @include headerTextStyles(6rem);
+        color: red;
       }
       p {
         font-size: $mainTextFontSize;
