@@ -27,12 +27,12 @@
       grid-row: 1/4;
       z-index: 10;
       color: #fff;
-      padding: 20px;
+      padding: 50px;
       display: flex;
       flex-direction: column;
       justify-content: center;
       h2 {
-        @include  headerTextStyles(4rem);
+        @include  headerTextStyles(3rem);
         margin-bottom: 50px;
         color: $thirdColor;
       }
