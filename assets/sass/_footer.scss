@@ -1,0 +1,33 @@
+
+.main-footer {
+  background: $footerBg;
+}
+
+.footer-wrapper {
+    @include flexAlignment(center, center, row);
+    color: #fff;
+    flex-wrap: wrap;
+    line-height: 1.4;
+    font-size: $secondaryInfoFontSize;
+    position: relative;
+    max-width: 1300px;
+    margin: auto;
+  
+    .footer-column-1 {
+      width: 40%;
+      padding: 20px 0;
+      a {
+        color: #fff;
+      }
+    }
+    .footer-column-2 {
+      width: 40%;
+      padding: 20px 0;
+    }
+    .footer-column-bottom {
+      width: 100%;
+      text-align: center;
+      padding: 20px 0;
+      border-top: 1px solid #fff;
+    }
+  }

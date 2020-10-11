@@ -1,0 +1,111 @@
+.services {
+    @include flexAlignment(center, center, row);
+    padding: 20px;
+  
+    .services-overlay {
+      @include overlayShadow(2);
+      opacity: 0;
+    }
+  
+    .services-container {
+      max-width: 1300px;
+      background: $primaryColor;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 400px;
+      grid-gap: 10px;
+  
+      .services-top {
+        @include flexAlignment(center, center, column);
+        position: relative;
+        grid-row: 1/2;
+        grid-column: 1/4;
+        color: $secondaryColor;
+        text-align: center;
+        line-height: 1.4;
+        margin: 50px 0;
+  
+        h2 {
+          @include headerTextStyles(4rem);
+        }
+  
+        p {
+          color: $paragraphColor;
+          font-size: $mainTextFontSize;
+        }
+  
+        .productosBtn {
+          @include buttons();
+          margin-top: 30px;
+        }
+        
+        .contact-button {
+          @include contactBtn();
+        }
+      }
+  
+      .services-right,
+      .services-middle,
+      .services-left {
+        @include flexAlignment(center, center, column);
+        position: relative;
+        color: #fff;
+        padding: 20px;
+        transition: $hoverTransition;
+        line-height: 1.8rem;
+        margin-bottom: 50px;
+  
+        img {
+          @include htmlImageStyles (absolute, 1);
+        }
+  
+        h2 {
+          font-size: $secondaryInfoFontSize;
+          font-weight: bold;
+          margin-bottom: 10px;
+          opacity: 0;
+          z-index: 2;
+        }
+        p {
+          font-size: $secondaryInfoFontSize;
+          line-height: 1.4;
+          opacity: 0;
+          z-index: 2;
+        }
+  
+        i {
+          font-size: 1.5rem;
+          position: absolute;
+          left: 50%;
+          top: -2rem;
+          transform: translateX(-50%);
+          background: $linksBg;
+          padding: 15px;
+          border-radius: 100%;
+          transition: opacity 0.4s ease;
+          z-index: 5;
+          box-shadow: 7px 10px 20px 0px rgba(0,0,0,0.75);
+        }
+  
+        &:hover h2,
+        &:hover p,
+        &:hover .services-overlay {
+          opacity: 1;
+        }
+      }
+  
+      .services-right {
+        grid-row: 2/3;
+        grid-column: 1/2;
+      }
+      .services-middle {
+        grid-row: 2/3;
+        grid-column: 2/3;
+      }
+      .services-left {
+        grid-row: 2/3;
+        grid-column: 3/4;
+      }
+    }
+  }
