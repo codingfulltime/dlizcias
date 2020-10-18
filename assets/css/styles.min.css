@@ -476,7 +476,7 @@
       width: 100%;
       object-fit: cover;
       z-index: 1;
-      height: 300px; }
+      height: 500px; }
     .productsGallery .picGallery .galleryText {
       padding: 10px;
       color: #fff;
@@ -616,7 +616,8 @@
         font-size: 1.3rem; }
 
   .productsGallery {
-    flex-direction: column; }
+    flex-direction: column;
+    padding: 15px; }
     .productsGallery .picGallery {
       width: 100%; }
       .productsGallery .picGallery .galleryText h2 {
